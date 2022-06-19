@@ -81,7 +81,7 @@ prefix: C:\Users\Cousteau\anaconda3\envs\pythonDMX
 
 We employ the [Musicnn](https://arxiv.org/abs/1909.06654v1) network for predicting the temporal 50 tags. 
 
-![Taggram](./images/Bastille.png "Tags")
+![Temporal evolution of the classes](./dmx_Bastille.png "Tags")
 
 
 
