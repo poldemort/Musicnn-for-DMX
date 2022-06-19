@@ -81,11 +81,17 @@ prefix: C:\Users\Cousteau\anaconda3\envs\pythonDMX
 
 We employ the [Musicnn](https://arxiv.org/abs/1909.06654v1) network for predicting the temporal 50 tags. 
 
+For instance,
+
+![Temporal evolution of the classes](./dmx_Bastille.png "Tags")
+
 Further [usage documentation is available on the Musicnn github](https://github.com/jordipons/musicnn).
 
 ## Algorithm performance
 
-![Temporal evolution of the classes](./dmx_Bastille.png "Tags")
+We plot the output of the network for the first 75 seconds of a song.
+
+![Temporal evolution of the classes](./testdmx_Bastille_crop2.png "Tags")
 
 We create the following output with our algorithm:
 
