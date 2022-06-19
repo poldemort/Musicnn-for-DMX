@@ -81,11 +81,17 @@ prefix: C:\Users\Cousteau\anaconda3\envs\pythonDMX
 
 We employ the [Musicnn](https://arxiv.org/abs/1909.06654v1) network for predicting the temporal 50 tags. 
 
+Further [usage documentation is available on the Musicnn github](https://github.com/jordipons/musicnn).
+
+## Algorithm performance
+
 ![Temporal evolution of the classes](./dmx_Bastille.png "Tags")
 
+We create the following output with our algorithm:
+
+![Output](./dmx_switches_Bastille.png "Output")
 
 
-Further [usage documentation is available on the Musicnn github](https://github.com/jordipons/musicnn).
 
 ## Lighting software
 
