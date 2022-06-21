@@ -3,7 +3,7 @@ We use the ConvNet Musicnn for DMX lighting automation.
 
 ## Environment preparation
 
-> We prepare the needed environment for the Musicnn network in a Ubuntu machine for simplicity. The versions of the packages must be python 3.7.13, tensorflow 1.15.0 and librosa 0.9.1. The network was created in these conditions and multiple methods are deprecated in actual versions. We replicated the environment on our Windows machine following the exported YAML file below.  It is possible that some components collision between them. We recommend to remove them from the YAML and install them manually later.
+We prepare the needed environment for the Musicnn network in a Ubuntu machine for simplicity. The versions of the packages must be python 3.7.13, tensorflow 1.15.0 and librosa 0.9.1. The network was created in these conditions and multiple methods are deprecated in actual versions. We replicated the environment on our Windows machine following the exported YAML file below.  Some components may collide between them. We recommend removing them from the YAML and installing them manually later.
 
 ```
 name: pythonDMX
@@ -89,7 +89,7 @@ Further [usage documentation is available on the Musicnn github](https://github.
 
 ## Algorithm performance
 
-We plot the output of the network for the first 75 seconds of a song and for just the first 27 tags. On the second figure, we plot the resulting switches. 
+We plot the output of the network for the first 75 seconds of a song and for just the first 27 tags. In the second figure, we plot the resulting switches. 
 
 ![Temporal evolution of the classes](./Bastille_final_crop.png "Tags")
 
@@ -116,7 +116,7 @@ The configurated scenes have a keyboard letter assigned to be able to launch the
 
 ## Operation example
 
-It is important to have the lighting software correctly parametrized with the keyboard keys ready to launch lighting scenes. [The algorithm](./api_dmx_project.py) generates on-line keyboard press and release following the song's speed. Every half second the song's tags are evaluated and the scene's switch is possible. In the code:
+It is important to have the lighting software correctly parametrized with the keyboard keys ready to launch lighting scenes. [The algorithm](./api_dmx_project.py) generates an online keyboard press and release following the song's speed. Every half second the song's tags are evaluated and the scene's switch is possible. In the code:
 ```
 for i in range(len(switches)):
   if switches[i] != 0:
@@ -130,4 +130,3 @@ So, if there is a scene switch at that timestep, the action is decided in `get_a
 While the script is running, the keys might be activated, writing letters on our computer autonomously. The lighting software has to be in the foreground to receive these inputs. 
 
 The script computes the full song at once and creates a countdown of ten seconds for the operator to switch its window to the lighting software. Once it starts, following the music speed, changes the scenes according to the algorithm's output. 
-
