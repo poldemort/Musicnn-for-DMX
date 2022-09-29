@@ -1,5 +1,5 @@
 # Musicnn-for-DMX
-We use the ConvNet Musicnn for DMX lighting automation.
+We use the ConvNet Musicnn for DMX lighting automation. See the document ![MUSICNN for DMX Lighting Software Automation](./API_Musicnn_DMX_PolMorPuigventos.pdf "API_Musicnn_DMX_PolMorPuigventos") with the details of the project.
 
 ## Environment preparation
 
